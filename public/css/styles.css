@@ -2,8 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Besley&family=Montserrat:wght@300&display=swap');
 
  html {
-    width: 354px;
-    height: 657px;
+    width: 100%;
     position: relative;
 } 
 
