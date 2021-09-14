@@ -1,6 +1,6 @@
 <%- include("partials/header"); -%>
     <center>
-        <h1 style="font-size: 18px;">Home</h1>
+        <h1 style="font-size: 20px;font-weight: 500;">Home</h1>
         <div class="go-to-post">
             <h3 style="margin-top: -10px;" class="text-primary">Compose</h3>
             <div class="compose-a-post">
@@ -8,7 +8,7 @@
             </div>
         </div>
     </center>
-    <p>
+    <p style="text-align: center;font-size: 13px;">
         <%= startingContent %>
     </p>
 
@@ -20,7 +20,10 @@
                         <div style="background-image: url('<%= post.image %>');" class="img-fluid img__wrap">
                             <a href="/posts/<%=post._id%>">
                                 <div class="img__description">
-                                    <p>VIEW</p>
+                                    <p>VIEW THIS BLOG</p>
+                                    <p style="margin-top: -15px;text-transform: uppercase;">
+                                        <%= post.author %>
+                                    </p>
                                 </div>
                             </a>
                         </div>
@@ -39,7 +42,7 @@
                         <hr class="title-header">
                         <p style="font-family: 'Besley', serif;">
                             <%=post.content.substring(0, 150) + " ..."%>
-                                <a class="text-read-more" href="/posts/<%=post._id%>">Read More</a>
+                                <a class="btn btn-primary" href="/posts/<%=post._id%>">View Post</a>
                         </p>
                         <div class="fb-share-button" data-href="https://blog-jouranl.herokuapp.com/posts/<%= post._id %> " data-layout="button" data-size="large">
                             <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog-jouranl.herokuapp.com%2Fposts%2F<%= post._id %>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">

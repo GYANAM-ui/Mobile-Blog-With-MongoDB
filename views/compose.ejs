@@ -2,7 +2,7 @@
 
     <h1>Compose</h1>
     <form class="" action="/compose" method="post">
-        <div class="form-group">
+        <div class="form-group" id="inputs-all">
             <label>Title</label>
             <input class="form-control" type="text" name="postTitle" placeholder="Title" required>
             <label>Subtitle</label>
@@ -19,8 +19,8 @@
             <textarea class="form-control" name="postBody" rows="5" cols="30" placeholder="Captions" required></textarea>
         </div>
         <div class="mt-2">
-            <button class="btn btn-primary" type="submit" name="button">Publish or Post</button>
-            <a href="/" class="btn btn-danger">Back</a>
+            <button style="border-radius: 10px;" class="btn btn-primary" type="submit" name="button">Publish or Post</button>
+            <a style="border-radius: 10px;" href="/" class="btn btn-danger">Back</a>
         </div>
         <div class="text-muted">
             <p>If you don't have an Idea of Blog Post. You can choose an Idea from <a href="https://blog.hubspot.com/sales/famous-quotes" target="_blank" rel="noopener noreferrer">here</a>.</p>

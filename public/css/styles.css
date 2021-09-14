@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Besley&family=Montserrat:wght@300&display=swap');
-html {
+
+/* html {
     min-height: 100%;
     position: relative;
-}
+} */
 
 body {
     background-color: #F8F8F8;
@@ -83,8 +84,10 @@ body {
 .img__wrap {
     position: relative;
     height: 150px;
-    width: 60%;
+    width: 100%;
     border-radius: 5px;
+    background-size: cover;
+    background-position: center;
 }
 
 .img__description {
@@ -132,7 +135,7 @@ body {
 }
 
 .go-to-post {
-    width: 50%;
+    width: 80%;
     padding: 15px;
     border-radius: 10px;
     background-color: #ffffff;
@@ -155,8 +158,12 @@ body {
     color: grey;
 }
 
+#inputs-all input textarea {
+    border-radius: 10px;
+}
+
 .coming-soon-div {
-    width: 60%;
+    width: 80%;
     padding: 10px;
     border-radius: 10px;
     background-color: #ffffff;
