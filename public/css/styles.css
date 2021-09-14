@@ -2,9 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Besley&family=Montserrat:wght@300&display=swap');
 
  html {
-    max-width: 100%;
-    min-width: 354px;
-    min-height: 657px;
+    width: 354px;
+    height: 657px;
     position: relative;
 } 
 
