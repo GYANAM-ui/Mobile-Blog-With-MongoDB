@@ -1,30 +1,32 @@
 <%- include("partials/header"); -%>
 
-    <h1>Compose</h1>
-    <form class="" action="/compose" method="post">
-        <div class="form-group" id="inputs-all">
-            <label>Title</label>
-            <input class="form-control" type="text" name="postTitle" placeholder="Title" required>
-            <label>Subtitle</label>
-            <input class="form-control" type="text" name="postSub" placeholder="Subtitle" required>
-            <label>Author Name</label>
-            <input class="form-control" type="text" name="authorName" placeholder="Author name" required>
-            <label>Author Image</label>
-            <input type="text" name="profile" class="form-control" placeholder="Author image URL">
-            <label>Banner</label>
-            <input type="text" name="banner" class="form-control" placeholder="Banner image URL" required>
-            <label>Image URL (You can use random images copy this link https://source.unsplash.com/random)</label>
-            <input type="text" name="imageURL" class="form-control" placeholder="Image URL">
-            <label>Post</label>
-            <textarea class="form-control" name="postBody" rows="5" cols="30" placeholder="Captions" required></textarea>
-        </div>
-        <div class="mt-2">
-            <button style="border-radius: 10px;" class="btn btn-primary" type="submit" name="button">Publish or Post</button>
-            <a style="border-radius: 10px;" href="/" class="btn btn-danger">Back</a>
-        </div>
-        <div class="text-muted">
-            <p>If you don't have an Idea of Blog Post. You can choose an Idea from <a href="https://blog.hubspot.com/sales/famous-quotes" target="_blank" rel="noopener noreferrer">here</a>.</p>
-            <p>We recommeded use <a href="https://unsplash.com" target="_blank">unsplash.com</a> images.</p>
-        </div>
-    </form>
+    <div class="container">
+        <h1>Compose</h1>
+        <form class="" action="/compose" method="post">
+            <div class="form-group" id="inputs-all">
+                <label>Title</label>
+                <input style="border-radius: 10px;" class="form-control" type="text" name="postTitle" placeholder="Title" required>
+                <label>Subtitle</label>
+                <input style="border-radius: 10px;" class="form-control" type="text" name="postSub" placeholder="Subtitle" required>
+                <label>Author Name</label>
+                <input style="border-radius: 10px;" class="form-control" type="text" name="authorName" placeholder="Author name" required>
+                <label>Author Image</label>
+                <input style="border-radius: 10px;" type="text" name="profile" class="form-control" placeholder="Author image URL">
+                <label>Banner</label>
+                <input style="border-radius: 10px;" type="text" name="banner" class="form-control" placeholder="Banner image URL" required>
+                <label>Image URL (You can use random images copy this link https://source.unsplash.com/random)</label>
+                <input style="border-radius: 10px;" type="text" name="imageURL" class="form-control" placeholder="Image URL">
+                <label>Post</label>
+                <textarea style="border-radius: 10px;" class="form-control" name="postBody" rows="5" cols="30" placeholder="Captions" required></textarea>
+            </div>
+            <div class="mt-2">
+                <button style="border-radius: 10px;" class="btn btn-primary" type="submit" name="button">Publish or Post</button>
+                <a style="border-radius: 10px;" href="/" class="btn btn-danger">Back</a>
+            </div>
+            <div class="text-muted">
+                <p>If you don't have an Idea of Blog Post. You can choose an Idea from <a href="https://blog.hubspot.com/sales/famous-quotes" target="_blank" rel="noopener noreferrer">here</a>.</p>
+                <p>We recommeded use <a href="https://unsplash.com" target="_blank">unsplash.com</a> images.</p>
+            </div>
+        </form>
+    </div>
     <%- include("partials/footer"); -%>
