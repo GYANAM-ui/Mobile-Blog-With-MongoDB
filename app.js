@@ -3,7 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const homeStartingContent = "Your posts shown below.";
 const aboutContent = "Developed by GYANAM. This is Blog Post Social Media.";
@@ -24,7 +24,9 @@ const postSchema = {
     profile: String,
     banner: String,
     image: String,
-    content: String
+    video: String,
+    content: String,
+    place: String
 };
 
 const Post = mongoose.model("Post", postSchema);
@@ -52,7 +54,9 @@ app.post("/compose", function(req, res) {
         profile: req.body.profile,
         banner: req.body.banner,
         image: req.body.imageURL,
-        content: req.body.postBody
+        video: req.body.videoURL,
+        content: req.body.postBody,
+        place: req.body.placeFrom
     });
 
 
@@ -75,9 +79,11 @@ app.get("/posts/:postId", function(req, res) {
             profile: post.profile,
             banner: post.banner,
             image: post.image,
+            video: post.video,
             content: post.content,
             id: post._id,
-            year: new Date().getFullYear()
+            place: post.place,
+            year: new Date().getFullYear(),
         });
     });
 
@@ -95,14 +101,13 @@ app.get("/news", (req, res) => {
     res.render("news", { year: new Date().getFullYear() });
 });
 
-app.get("/courses/all/", (req, res) => {
-    res.render('globalcompose', { year: new Date().getFullYear() });
+app.get("/banner/", (req, res) => {
+    res.render('viewers', { year: new Date().getFullYear() });
 })
 
 app.use(function(req, res) {
     res.status(404).render('404');
 });
-
 
 app.listen(process.env.PORT || 3000, function() {
     console.log("Server started on port 3000");

@@ -1,15 +1,26 @@
 <%- include("partials/header"); -%>
     <center>
         <h1 style="font-size: 20px;font-weight: 500;">Home</h1>
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Advertisement!</strong> <span style="font-size: 18px;font-weight: 500;" class="text-capitalize"> Use our provido conference webapp <a href="https://provido-meetings-by-gyanam.herokuapp.com/" target="_blank" class="btn btn-outline-primary">Visit Site</a>
+
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <strong>NEW!</strong> <span style="font-size: 18px;font-weight: 500;" class="text-capitalize"> Now You Can Share Videos, See User Details And More. 
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
+        </div>
+
+        <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Advertisement!</strong> <span style="font-size: 18px;font-weight: 500;" class="text-capitalize"> Use our provido conference webapp <a href="https://provido-meetings-by-gyanam.herokuapp.com/" target="_blank" class="btn btn-outline-primary">Visit Site</a>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div> -->
+
         <div class="go-to-post">
             <h3 style="margin-top: -10px;" class="text-primary">Compose</h3>
             <div class="compose-a-post">
-                <a href="/compose">Write your journal...</a>
+                <a href="/compose">Compose your post...</a>
             </div>
+            <a style="text-decoration: none;font-weight: 500;" href="https://forms.gle/LFGEum9ZNmEcamCd9" target="_blank">
+                Customer Feedback
+                <i class="fa fa-arrow-right">&nbsp;</i>
+           </a>
         </div>
     </center>
     <p style="text-align: center;font-size: 13px;">
@@ -38,29 +49,29 @@
                             </svg>
                              <%= post.author %> 
                         </span>
-                    </div>
-                    <div class="col-lg-6">
-                        <h1 style="font-family: 'Besley', serif;">
-                            <%=post.title%>
-                        </h1>
-                        <hr class="title-header">
-                        <p style="font-family: 'Besley', serif;">
-                            <%=post.content.substring(0, 150) + " ..."%>
-                                <a class="btn btn-primary" href="/posts/<%=post._id%>">View Post</a>
-                        </p>
-                        <div class="fb-share-button" data-href="https://blog-jouranl.herokuapp.com/posts/<%= post._id %> " data-layout="button" data-size="large">
-                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog-jouranl.herokuapp.com%2Fposts%2F<%= post._id %>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        </div>
+        <div class="col-lg-6">
+            <h1 style="font-family: 'Besley', serif;">
+                <%=post.title%>
+            </h1>
+            <hr class="title-header">
+            <p style="font-family: 'Besley', serif;">
+                <%=post.content.substring(0, 150) + " ..."%>
+                    <a class="btn btn-primary" href="/posts/<%=post._id%>">View Post</a>
+            </p>
+            <div class="fb-share-button" data-href="https://blog-jouranl.herokuapp.com/posts/<%= post._id %> " data-layout="button" data-size="large">
+                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog-jouranl.herokuapp.com%2Fposts%2F<%= post._id %>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                                     <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
                                 </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
-            <hr>
-            <% }) %>
-    </div>
+        </div>
+        </div>
+        </div>
+        <hr>
+        <% }) %>
+            </div>
 
 
-    <%- include("partials/footer"); -%>
+            <%- include("partials/footer"); -%>

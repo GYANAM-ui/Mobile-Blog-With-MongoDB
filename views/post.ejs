@@ -56,7 +56,7 @@
                 <p>
                     <%= subtitle %>
                 </p>
-                <div class="profile-img img-responsive mt-3" alt="<%= author %>" data-toggle="tooltip" data-placement="top" title="<%= author %> " style="background-image: url('<%= profile %>');"></div>
+                <div class="profile-img img-responsive mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="<%= author %>" data-toggle="tooltip" data-placement="top" title="<%= author %> " style="background-image: url('<%= profile %>');"></div>
                 <br>
                 <span class="mt-3">Posted by 
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -66,6 +66,15 @@
                      <%= author %> 
                 </span>
             </div>
+            <div class="imp">
+                <button class="view" onclick="viewBanner();">
+                    View banner
+                </button>
+                <button class="view-profile" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    View profile
+                </button>
+            </div>
+            <br>
         </center>
         <hr>
         <br><br>
@@ -74,6 +83,9 @@
         <p class="content-p">
             <%=content%>
         </p>
+        <video controls class="video-element">
+            <source src="<%= video %> ">
+        </video>
         <div>
             <div>
                 <h3 class="text-dark">Share</h3>
@@ -89,8 +101,8 @@
         </div>
     </div>
     <div class="container mt-3 watermark">
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Advertisement!</strong> <span style="font-size: 18px;font-weight: 500;" class="text-capitalize"> Use our provido conference webapp <a href="https://provido-meetings-by-gyanam.herokuapp.com/" target="_blank" class="btn btn-outline-primary">Visit Site</a>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Advertisement!</strong> <span style="font-size: 18px;font-weight: 500;" class="text-capitalize"> Use our provido conference webapp <a href="https://provido-meetings-by-gyanam.herokuapp.com/" target="_blank" class="btn btn-outline-primary">Visit Site</a>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         <center>
@@ -106,6 +118,34 @@
         </center>
     </div>
 
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            <%= author %>
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-secondary">
+                        <div class="card">
+                            <center>
+                                <img src="<%= profile %> " alt="Avatar" style="width:150px;height: 150px;border-radius: 50%;">
+                            </center>
+                            <div class="container">
+                              <h4><b><%= author %> </b></h4>
+                              <p><%= place %> </p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-613e3c91bc28ce24"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
@@ -114,6 +154,12 @@
     <script>
         function back() {
             window.location = '/';
+        }
+
+        function viewBanner() {
+            bannerURL = "<%= banner %>";
+            localStorage.setItem("bannerURL", bannerURL);
+            window.location = '/banner';
         }
     </script>
 

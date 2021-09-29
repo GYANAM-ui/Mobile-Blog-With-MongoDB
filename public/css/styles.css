@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    background-color: #F8F8F8;
+    background-color: #cccccc;
 }
 
 .navbar {
@@ -97,7 +97,8 @@ body {
     height: 150px;
     width: 100%;
     background: rgba(204, 204, 204, 0.72);
-    color: #fff;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
     visibility: hidden;
     opacity: 0;
     transition: opacity .2s, visibility .2s;

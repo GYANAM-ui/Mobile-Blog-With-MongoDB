@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        html {
+            width: 100%;
+            position: relative;
+        }
+        
+        #frame {
+            width: 100%;
+            height: 300px;
+            padding: 10px;
+            border-radius: 10px;
+            color: rgb(228, 228, 228);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .form-group {
+            text-align: left;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(219, 219, 219);
+            font-weight: 600;
+        }
+        
+        .header {
+            width: 100%;
+            padding: 10px;
+        }
+        
+        .view-back {
+            color: #fff;
+            border-radius: 30px;
+            padding: 10px;
+            border: 1px solid #fff;
+            text-decoration: none;
+            background-color: transparent;
+            font-weight: 600;
+        }
+        
+        .view-back:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header bg-secondary">
+        <br>
+        <a href="/" class="view-back">
+            <i class="fa fa-arrow-left">&nbsp;</i> Back
+        </a>
+        <span class="text-white" style="text-align: center;font-weight: 600;font-size: 18px;">
+        <center>
+            VIEW BANNER
+        </center>
+        </span>
+    </div>
+    <div class="container">
+        <center>
+            <img src="" id="frame" />
+            <div class="form-group">
+                <p class="text-danger">URL: <span class="text-primary" id="url"></span></p>
+            </div>
+            <button onclick="web()" class="btn btn-primary mt-3">Browser View</button>
+        </center>
+    </div>
+
+    <script>
+        var _0x5cb32d = _0xa03d;
+        (function(_0x47a75f, _0x3ff7ba) {
+            var _0x596749 = _0xa03d,
+                _0x4161c8 = _0x47a75f();
+            while (!![]) {
+                try {
+                    var _0xb202f1 = -parseInt(_0x596749(0x1ef)) / 0x1 + parseInt(_0x596749(0x1fe)) / 0x2 + -parseInt(_0x596749(0x1f5)) / 0x3 * (parseInt(_0x596749(0x1fb)) / 0x4) + -parseInt(_0x596749(0x1fc)) / 0x5 * (-parseInt(_0x596749(0x1ee)) / 0x6) + parseInt(_0x596749(0x1f3)) / 0x7 + parseInt(_0x596749(0x1ed)) / 0x8 * (parseInt(_0x596749(0x1fa)) / 0x9) + -parseInt(_0x596749(0x1f2)) / 0xa;
+                    if (_0xb202f1 === _0x3ff7ba) break;
+                    else _0x4161c8['push'](_0x4161c8['shift']());
+                } catch (_0x50ee4a) {
+                    _0x4161c8['push'](_0x4161c8['shift']());
+                }
+            }
+        }(_0x32ed, 0x342fb), bannerURL = localStorage[_0x5cb32d(0x1f0)](_0x5cb32d(0x1f1)), document[_0x5cb32d(0x1f9)](_0x5cb32d(0x1f6))[_0x5cb32d(0x1f4)] = bannerURL, document[_0x5cb32d(0x1f9)](_0x5cb32d(0x1f7))[_0x5cb32d(0x1f8)] = bannerURL);
+
+        function _0xa03d(_0x1b85d9, _0x56c50e) {
+            var _0x32ed5c = _0x32ed();
+            return _0xa03d = function(_0xa03d45, _0x23845a) {
+                _0xa03d45 = _0xa03d45 - 0x1ed;
+                var _0xdf8e8b = _0x32ed5c[_0xa03d45];
+                return _0xdf8e8b;
+            }, _0xa03d(_0x1b85d9, _0x56c50e);
+        }
+
+        function _0x32ed() {
+            var _0x25856a = ['4927390nLYCtz', '2819348KTdgOu', 'src', '438dLDffQ', 'frame', 'url', 'innerHTML', 'getElementById', '9yesPYk', '4100naILOu', '5EOPJIR', 'open', '851190CKSXDC', '1039120MFAEdT', '1925076zaBdBk', '422951VHgdDw', 'getItem', 'bannerURL'];
+            _0x32ed = function() {
+                return _0x25856a;
+            };
+            return _0x32ed();
+        }
+
+        function web() {
+            var _0x16bf6c = _0x5cb32d;
+            window[_0x16bf6c(0x1fd)](bannerURL);
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
