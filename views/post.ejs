@@ -30,7 +30,7 @@
     </script>
 </head>
 
-<body style="background: whitesmoke;padding: 5px;">
+<body style="background-image: linear-gradient(135deg, rgba(230, 73, 128, 0.53) 5%, rgba(255, 135, 135, 0.53) 95%);">
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="/">
             <img src="https://img.icons8.com/color-glass/48/000000/social-network.png" alt="Logo" class="img-fluid" style="margin-left: 10px;">
@@ -159,22 +159,24 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel2">
                             <span class="text-danger"><b>Playing Video</b></span>
-                        </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body bg-secondary">
-                        <div class="card">
-                            <video autoplay="false" controls="true">
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-secondary">
+            <div class="card">
+                <video autoplay="false" controls="true">
                                 <source src="<%= video %>">
                             </video>
-                            <p class="text-muted" style="font-weight: 600;">Video posted by: <%= author %></p>
-                        </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
+                <p class="text-muted" style="font-weight: 600;">Video posted by:
+                    <%= author %>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
+    </div>
+    </div>
 
 
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-613e3c91bc28ce24"></script>
