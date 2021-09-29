@@ -86,6 +86,12 @@
         <video controls class="video-element">
             <source src="<%= video %> ">
         </video>
+        <center>
+            <a style="font-weight: 500;width: 100%;" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                Watch video
+            <i class="fa fa-video">&nbsp;</i>
+        </a>
+        </center>
         <div>
             <div>
                 <h3 class="text-dark">Share</h3>
@@ -158,10 +164,10 @@
                     </div>
                     <div class="modal-body bg-secondary">
                         <div class="card">
-                            <video>
-                                <source src="<%= video %>" type="webm/mp4">
+                            <video autoplay="false" controls="true">
+                                <source src="<%= video %>">
                             </video>
-                            <p class="text-muted">Video posted by: <%= author %></p>
+                            <p class="text-muted" style="font-weight: 600;">Video posted by: <%= author %></p>
                         </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
