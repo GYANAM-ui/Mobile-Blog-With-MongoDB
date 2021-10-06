@@ -101,6 +101,10 @@ app.get("/news", (req, res) => {
     res.render("news", { year: new Date().getFullYear() });
 });
 
+app.get("/reg", (req, res) => {
+    res.render('reg');
+})
+
 app.get("/banner/", (req, res) => {
     res.render('viewers', { year: new Date().getFullYear() });
 })
