@@ -5,10 +5,6 @@ html {
     position: relative;
 }
 
-body {
-    background-image: linear-gradient(90deg, rgba(161, 196, 253, 0.96) 18%, rgba(194, 233, 251, 0.93) 64%);
-}
-
 .navbar {
     padding: 5px;
     border: 0;
@@ -16,7 +12,8 @@ body {
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 5px;
-    background-image: linear-gradient(90deg, rgba(121, 80, 242, 0.72) 24%, rgba(116, 143, 252, 0.73) 71%);
+    background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);
+    background: linear-gradient(to top, #2F80ED, #56CCF2);
 }
 
 .navbar-nav li a {

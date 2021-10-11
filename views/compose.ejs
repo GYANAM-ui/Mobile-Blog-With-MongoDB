@@ -8,8 +8,12 @@
                 <input style="border-radius: 10px;" class="form-control" type="text" name="postTitle" placeholder="Title" required>
                 <label>Subtitle</label>
                 <input style="border-radius: 10px;" class="form-control" type="text" name="postSub" placeholder="Subtitle" required>
+                <label>Place (Where are you from)</label>
+                <input style="border-radius: 10px;" class="form-control" type="text" name="placeFrom" placeholder="Place" required>
                 <label>Author Name</label>
                 <input style="border-radius: 10px;" class="form-control" type="text" name="authorName" placeholder="Author name" required>
+                <label>Add website</label>
+                <input style="border-radius: 10px;" class="form-control" type="text" name="websiteURL" placeholder="Add website URL" required>
                 <label>Author Image</label>
                 <input style="border-radius: 10px;" type="text" name="profile" class="form-control" placeholder="Author image URL">
                 <label>Banner</label>
@@ -20,10 +24,14 @@
                 <input style="border-radius: 10px;" type="text" name="videoURL" class="form-control" placeholder="Video URL" required>
                 <label>Post</label>
                 <textarea style="border-radius: 10px;" class="form-control" name="postBody" rows="5" cols="30" placeholder="Captions" required></textarea>
+                <label>About Author</label>
+                <textarea style="border-radius: 10px;" class="form-control" name="about" rows="3" cols="20" placeholder="Describe yourself" required></textarea>
+                <label>Date</label>
+                <input style="border-radius: 10px;" type="date" name="blogDate" class="form-control" required>
             </div>
             <div class="mt-2">
-                <button style="border-radius: 10px;" class="btn btn-primary" type="submit" name="button">Publish or Post</button>
-                <a style="border-radius: 10px;" href="/" class="btn btn-danger">Back</a>
+                <button class="btn btn-primary" type="submit" name="button">Publish or Post</button>
+                <a href="/" class="btn btn-danger">Back</a>
             </div>
             <div class="text-muted">
                 <p>If you don't have an Idea of Blog Post. You can choose an Idea from <a href="https://blog.hubspot.com/sales/famous-quotes" target="_blank" rel="noopener noreferrer">here</a>.</p>

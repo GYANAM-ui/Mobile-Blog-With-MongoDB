@@ -26,7 +26,10 @@ const postSchema = {
     image: String,
     video: String,
     content: String,
-    place: String
+    place: String,
+    date: String,
+    authorWebURL: String,
+    about: String
 };
 
 const Post = mongoose.model("Post", postSchema);
@@ -56,7 +59,10 @@ app.post("/compose", function(req, res) {
         image: req.body.imageURL,
         video: req.body.videoURL,
         content: req.body.postBody,
-        place: req.body.placeFrom
+        about: req.body.about,
+        place: req.body.placeFrom,
+        date: req.body.blogDate,
+        authorWebURL: req.body.websiteURL
     });
 
 
@@ -67,7 +73,7 @@ app.post("/compose", function(req, res) {
     });
 });
 
-app.get("/posts/:postId", function(req, res) {
+app.get("/posts/:postId/view_post", function(req, res) {
 
     const requestedPostId = req.params.postId;
 
@@ -83,11 +89,36 @@ app.get("/posts/:postId", function(req, res) {
             content: post.content,
             id: post._id,
             place: post.place,
+            date: post.date,
+            authorWebURL: post.authorWebURL,
             year: new Date().getFullYear(),
         });
     });
 
 });
+
+app.get("/profile/:postId", (req, res) => {
+    const requestedPostId = req.params.postId;
+
+    Post.findOne({ _id: requestedPostId }, function(err, post) {
+        res.render("profile", {
+            title: post.title,
+            subtitle: post.subtitle,
+            author: post.author,
+            profile: post.profile,
+            banner: post.banner,
+            image: post.image,
+            video: post.video,
+            content: post.content,
+            about: post.about,
+            id: post._id,
+            place: post.place,
+            date: post.date,
+            authorWebURL: post.authorWebURL,
+            year: new Date().getFullYear(),
+        });
+    });
+})
 
 app.get("/about", function(req, res) {
     res.render("about", { aboutContent: aboutContent, year: new Date().getFullYear() });
@@ -100,10 +131,6 @@ app.get("/contact", function(req, res) {
 app.get("/news", (req, res) => {
     res.render("news", { year: new Date().getFullYear() });
 });
-
-app.get("/reg", (req, res) => {
-    res.render('reg');
-})
 
 app.get("/banner/", (req, res) => {
     res.render('viewers', { year: new Date().getFullYear() });
