@@ -6,7 +6,7 @@ const ejs = require("ejs");
 const mongoose = require("mongoose");
 
 const homeStartingContent = "Your posts shown below.";
-const aboutContent = "Developed by GYANAM. This is Blog Post Social Media.";
+const aboutContent = "Developed by GYANAM. This is  Blog Post Social Media.";
 const contactContent = "Contact email address is ";
 
 const app = express();
@@ -29,7 +29,8 @@ const postSchema = {
     place: String,
     date: String,
     authorWebURL: String,
-    about: String
+    about: String,
+    relations: String
 };
 
 const Post = mongoose.model("Post", postSchema);
@@ -62,7 +63,8 @@ app.post("/compose", function(req, res) {
         about: req.body.about,
         place: req.body.placeFrom,
         date: req.body.blogDate,
-        authorWebURL: req.body.websiteURL
+        authorWebURL: req.body.websiteURL,
+        relations: req.body.relationship
     });
 
 
@@ -70,6 +72,7 @@ app.post("/compose", function(req, res) {
         if (!err) {
             res.redirect("/");
         }
+        console.log(post);
     });
 });
 
@@ -91,7 +94,8 @@ app.get("/posts/:postId/view_post", function(req, res) {
             place: post.place,
             date: post.date,
             authorWebURL: post.authorWebURL,
-            year: new Date().getFullYear(),
+            relations: post.relations,
+            year: new Date().getFullYear()
         });
     });
 
@@ -115,10 +119,15 @@ app.get("/profile/:postId", (req, res) => {
             place: post.place,
             date: post.date,
             authorWebURL: post.authorWebURL,
+            relations: post.relations,
             year: new Date().getFullYear(),
         });
     });
 })
+
+app.get("/banner", function(req, res) {
+    res.render("viewers");
+});
 
 app.get("/about", function(req, res) {
     res.render("about", { aboutContent: aboutContent, year: new Date().getFullYear() });
@@ -131,10 +140,6 @@ app.get("/contact", function(req, res) {
 app.get("/news", (req, res) => {
     res.render("news", { year: new Date().getFullYear() });
 });
-
-app.get("/banner/", (req, res) => {
-    res.render('viewers', { year: new Date().getFullYear() });
-})
 
 app.use(function(req, res) {
     res.status(404).render('404');
